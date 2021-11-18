@@ -1,0 +1,4 @@
+@mixin flexMe($js) {
+    display: flex;
+    justify-content:$js;
+}
