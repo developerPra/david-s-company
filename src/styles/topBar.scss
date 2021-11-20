@@ -1,0 +1,79 @@
+@import "./common.scss";
+
+.topBar {
+    width: 96vw - $sidebar-width;
+    height: $topbar-height;
+    position: absolute;
+    top: $header-height + 5vh;
+    right: 8%;
+    transform: translateX(8%);
+    padding: 2rem 3rem;
+    background-color: $white;
+    box-shadow: $shadow-1;
+    border-radius: 8px;
+
+    &.active {}
+
+    ul.topBar-menus {
+        height: 100%;
+        list-style-type: none;
+        padding-left: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li.topBar-menu {
+            position: relative;
+
+            span {
+                display: none;
+            }
+
+            i {
+                margin-right: .5rem;
+            }
+
+            &.active {
+                font-weight: bold;
+
+                i {
+                    font-weight: bold;
+                }
+
+                &::before {
+                    position: absolute;
+                    bottom: -1.25rem;
+                    content: "";
+                    height: 2px;
+                    width: 100%;
+                    background-color: $prime-blue;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .topBar {
+
+        ul.topBar-menus {
+            li.topBar-menu {
+                span {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topBar {
+        padding: 1.5rem 2rem;
+
+        ul.topBar-menus {
+            li.topBar-menu.active::before {
+                bottom: -0.75rem;
+            }
+        }
+    }
+}

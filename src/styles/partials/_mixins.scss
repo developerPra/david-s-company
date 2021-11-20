@@ -1,4 +1,10 @@
-@mixin flexMe($js) {
+@mixin flexMe($js, $ai) {
     display: flex;
-    justify-content:$js;
+    justify-content: $js;
+    align-items: $ai;
+}
+
+@mixin gridCenter {
+    display: grid;
+    place-items: center;
 }

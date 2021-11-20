@@ -1,0 +1,41 @@
+@import "./common.scss";
+
+.dashboard {
+    position: absolute;
+    top: $header-height + $topbar-height + 12vh;
+    height: 70vh;
+    width: 96vw - $sidebar-width;
+    right: 8%;
+    transform: translateX(8%);
+    padding: 1rem 1.5rem 2em;
+    background-color: $white;
+    box-shadow: $shadow-1;
+    border-radius: 8px;
+    overflow-y: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard {
+        padding: 1rem 0.5rem;
+    }
+}
